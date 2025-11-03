@@ -1,0 +1,77 @@
+:root {
+  --color-accent: #2B9CD8;
+  --color-text: #000000;
+  --color-bg: #e5f8ff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Color helpers (use alongside Tailwind classes) */
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-light {
+  background-color: var(--color-bg);
+}
+
+.text-dark {
+  color: var(--color-text);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2389be;
+}
+
+/* Simple card shadow */
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Disable scroll on desktop */
+@media (min-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}
+
+/* Allow scroll on mobile */
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow: auto;
+  }
+}
+
