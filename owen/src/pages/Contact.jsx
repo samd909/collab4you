@@ -18,7 +18,7 @@ const Contact = () => {
           </section>
 
           {/* Contact info grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-8">
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-dark mb-2">Bedrijfsgegevens</h3>
               <ul className="space-y-2 text-gray-700">

@@ -16,7 +16,7 @@ const Home = () => {
           {/* Intro section */}
           <section className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-dark">
-              Groei met krachtige Meta Ads
+                Welkom bij Collab4You
             </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Bij <span className="font-semibold text-accent">COLLAB4YOU</span> helpen we bedrijven om zichtbaar te worden bij de juiste doelgroep via krachtige Meta Ads op Facebook en Instagram.  
@@ -48,7 +48,7 @@ const Home = () => {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow"
+                className="bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
               >
                 <h3 className="text-xl font-semibold text-dark mb-2">
                   {card.title}
