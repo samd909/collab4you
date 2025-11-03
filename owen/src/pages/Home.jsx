@@ -23,7 +23,7 @@ const Home = () => {
               We creëren en beheren effectieve advertentiecampagnes die niet alleen bereik vergroten, maar ook échte resultaten opleveren — meer klanten, meer omzet en meer merkbekendheid.
             </p>
             <Link
-              to="/diensten"
+              to="/services"
               className="inline-block mt-4 bg-accent text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
             >
               Ontdek onze diensten

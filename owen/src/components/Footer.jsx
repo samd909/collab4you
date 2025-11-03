@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg text-black mt-auto w-full md:fixed md:bottom-0 md:left-0">
-      <div className="container mx-auto p-4 text-center">
-        &copy; {new Date().getFullYear()} Collab4You. All rights reserved.
+    <footer className="bg-bg text-gray-900 mt-auto w-full md:fixed md:bottom-0 md:left-0 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm md:text-base">
+        © {new Date().getFullYear()} <span className="font-semibold">Collab4You</span>. Alle rechten voorbehouden.
       </div>
     </footer>
   );
