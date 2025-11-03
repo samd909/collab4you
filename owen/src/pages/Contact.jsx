@@ -99,10 +99,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Footer note */}
-          <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} Collab4You B.V. — Alle rechten voorbehouden.
-          </p>
         </div>
       </main>
     </>

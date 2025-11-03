@@ -1,107 +1,74 @@
 import React from "react";
 import { Title, Meta } from "react-head";
 
-const services = [
-  {
-    title: "Collaboration Tools",
-    description:
-      "Streamline teamwork with shared projects, real-time editing, and built-in communication tools.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-accent"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17 20h5v-2a3 3 0 00-5.356-1.857M9 20H4v-2a3 3 0 015.356-1.857M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Project Management",
-    description:
-      "Plan, organize, and execute projects efficiently with intuitive workflows and progress tracking.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-accent"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 17v-6a2 2 0 012-2h8M9 13h6m-9 4H5a2 2 0 01-2-2V7a2 2 0 012-2h5l2 2h8a2 2 0 012 2v1"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Developer Integration",
-    description:
-      "Easily connect with your favorite platforms and APIs to enhance your development workflow.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-accent"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M16 18l6-6-6-6M8 6l-6 6 6 6"
-        />
-      </svg>
-    ),
-  },
-];
-
 const Services = () => {
   return (
     <>
       <Title>Diensten - Collab4You</Title>
-      <Meta name="description" content="Explore the services offered by Collab4You" />
+      <Meta
+        name="description"
+        content="Ontdek hoe Collab4You bedrijven helpt groeien via op maat gemaakte Meta Ads strategieën."
+      />
 
-      <main className="bg-bg min-h-screen  px-6 overflow-auto md:overflow-hidden">
-        <div className="max-w-7xl mx-auto space-y-10">
+      <main className="bg-bg min-h-screen py-16 px-6">
+        <div className="max-w-5xl mx-auto space-y-12">
           {/* Header */}
           <section className="text-center space-y-4">
             <h2 className="text-4xl font-bold text-dark">Onze Diensten</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              We provide simple and powerful tools that help teams collaborate,
-              manage projects, and innovate together.
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+              Met <span className="font-semibold text-accent">COLLAB4YOU</span> haal je niet zomaar een adverteerder in huis, maar een partner die meedenkt.  
+              Onze aanpak is volledig op maat — van strategie tot groei.
             </p>
           </section>
 
-          {/* Services grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          {/* Service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: "🎯",
+                title: "Strategie & Doelgroepanalyse",
+                desc: "We onderzoeken waar jouw ideale klant zich bevindt en hoe we hen het beste kunnen bereiken.",
+              },
+              {
+                icon: "✍️",
+                title: "Advertentiecreatie",
+                desc: "Van pakkende visuals tot overtuigende teksten — wij zorgen dat klikken klanten worden.",
+              },
+              {
+                icon: "📊",
+                title: "Campagnebeheer & Optimalisatie",
+                desc: "We volgen prestaties op de voet en sturen continu bij voor het beste rendement.",
+              },
+              {
+                icon: "📈",
+                title: "Rapportage & Groei",
+                desc: "Heldere resultaten en concrete stappen om verder te schalen en je merk te laten groeien.",
+              },
+            ].map((service, i) => (
               <div
-                key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-all"
+                key={i}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow"
               >
-                <div className="flex items-center justify-center mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-dark text-center mb-3">
+                <div className="text-3xl mb-3">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-dark mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-center">
-                  {service.description}
-                </p>
+                <p className="text-gray-600">{service.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* Call to action */}
+          <div className="text-center mt-10">
+            <p className="text-gray-700 mb-4">
+              Klaar om jouw bedrijf te laten groeien met Meta Ads?
+            </p>
+            <a
+              href="mailto:info@collab4you.nl"
+              className="bg-accent text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+            >
+              Neem contact op
+            </a>
           </div>
         </div>
       </main>

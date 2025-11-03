@@ -1,44 +1,63 @@
 import React from "react";
 import { Title, Meta } from "react-head";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
       <Title>Home - Collab4You</Title>
-      <Meta name="description" content="This is the home page" />
+      <Meta
+        name="description"
+        content="Bij Collab4You helpen we bedrijven groeien via gerichte Meta Ads campagnes op Facebook en Instagram."
+      />
 
-      <main className="bg-bg min-h-screen py-12 px-6">
-        <div className="max-w-7xl mx-auto space-y-10">
-          <section className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-dark">
-              Welcome to Collab4You
-            </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              Bringing creators, developers, and thinkers together — one project
-              at a time.
+      <main className="bg-bg min-h-screen py-16 px-6">
+        <div className="max-w-6xl mx-auto space-y-16 text-center">
+          {/* Intro section */}
+          <section className="space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-dark">
+              Groei met krachtige Meta Ads
+            </h1>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Bij <span className="font-semibold text-accent">COLLAB4YOU</span> helpen we bedrijven om zichtbaar te worden bij de juiste doelgroep via krachtige Meta Ads op Facebook en Instagram.  
+              We creëren en beheren effectieve advertentiecampagnes die niet alleen bereik vergroten, maar ook échte resultaten opleveren — meer klanten, meer omzet en meer merkbekendheid.
             </p>
+            <Link
+              to="/diensten"
+              className="inline-block mt-4 bg-accent text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+            >
+              Ontdek onze diensten
+            </Link>
           </section>
 
-          {/* Info cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
+          {/* Visual cards or highlights */}
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Meta Ads Expertise",
+                desc: "Wij weten hoe je jouw merk zichtbaar maakt op Facebook en Instagram voor maximale impact.",
+              },
+              {
+                title: "Doelgerichte Strategie",
+                desc: "Met data en inzicht bouwen we campagnes die precies de juiste mensen bereiken.",
+              },
+              {
+                title: "Resultaatgericht",
+                desc: "Wij meten, optimaliseren en schalen jouw campagnes voor blijvende groei.",
+              },
+            ].map((card, i) => (
               <div
-                key={item}
+                key={i}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow"
               >
                 <h3 className="text-xl font-semibold text-dark mb-2">
-                  Card {item}
+                  {card.title}
                 </h3>
-                <p className="text-gray-600">
-                  Some example content for card {item}. Customize this section
-                  with your own information.
-                </p>
-                <button className="btn mt-4 bg-accent text-white px-4 py-2 rounded-lg hover:opacity-90 transition">
-                  Learn More
-                </button>
+                <p className="text-gray-600">{card.desc}</p>
               </div>
             ))}
-          </div>
+          </section>
+
         </div>
       </main>
     </>
