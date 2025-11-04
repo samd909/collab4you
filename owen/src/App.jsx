@@ -10,7 +10,6 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-import Sitemap from "./pages/Sitemap";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -55,14 +54,6 @@ function AnimatedRoutes() {
           element={
             <PageWrapper>
               <Terms />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/sitemap.xml"
-          element={
-            <PageWrapper>
-              <Sitemap />
             </PageWrapper>
           }
         />
