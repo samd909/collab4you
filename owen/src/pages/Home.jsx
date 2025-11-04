@@ -12,7 +12,7 @@ const Home = () => {
         content="Bij Collab4You helpen we bedrijven groeien via gerichte Meta Ads campagnes op Facebook en Instagram."
       />
 
-      <main className="bg-bg min-h-screen py-16 px-6">
+      <main className="bg-transparent min-h-screen py-16 px-6">
         <div className="max-w-6xl mx-auto space-y-16 text-center">
           {/* Intro section */}
           <section className="space-y-6">

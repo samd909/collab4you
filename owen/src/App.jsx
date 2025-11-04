@@ -69,7 +69,7 @@ const PageWrapper = ({ children }) => (
     animate={{ opacity: 1, x: 0 }}
     exit={{ opacity: 0, x: -50 }}
     transition={{ duration: 0.4, ease: "easeInOut" }}
-    className="flex-grow w-full mx-auto p-4"
+    className="bg-bg flex-grow w-full mx-auto p-4"
   >
     {children}
   </motion.div>
