@@ -16,22 +16,22 @@ const Home = () => {
         <div className="max-w-6xl mx-auto space-y-16 text-center">
           {/* Intro section */}
           <section className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-dark">
-                Welkom bij Collab4You
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Welkom bij Collab4You
             </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Bij <span className="font-semibold text-accent">COLLAB4YOU</span> helpen we bedrijven om zichtbaar te worden bij de juiste doelgroep via krachtige Meta Ads op Facebook en Instagram.  
+              Bij <span className="font-semibold text-blue-700">COLLAB4YOU</span> helpen we bedrijven om zichtbaar te worden bij de juiste doelgroep via krachtige Meta Ads op Facebook en Instagram.  
               We creëren en beheren effectieve advertentiecampagnes die niet alleen bereik vergroten, maar ook échte resultaten opleveren — meer klanten, meer omzet en meer merkbekendheid.
             </p>
             <Link
               to="/services"
-              className="inline-block mt-4 bg-accent text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+              className="inline-block mt-4 bg-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-800 transition"
             >
               Ontdek onze diensten
             </Link>
           </section>
 
-          {/* Visual cards or highlights */}
+          {/* Visual cards */}
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -51,10 +51,10 @@ const Home = () => {
                 key={i}
                 className="bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
               >
-                <h3 className="text-xl font-semibold text-dark mb-2">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
                   {card.title}
-                </h3>
-                <p className="text-gray-600">{card.desc}</p>
+                </h2>
+                <p className="text-gray-700">{card.desc}</p>
               </div>
             ))}
           </section>

@@ -7,10 +7,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm md:text-base space-y-2">
         {/* Links naar Privacy en Algemene Voorwaarden */}
         <div className="flex justify-center space-x-4 mb-1">
-          <Link to="/privacy" className="text-accent hover:underline text-sm md:text-base">
+          <Link
+            to="/privacy"
+            className="text-blue-700 hover:underline text-sm md:text-base"
+          >
             Privacybeleid
           </Link>
-          <Link to="/tos" className="text-accent hover:underline text-sm md:text-base">
+          <Link
+            to="/tos"
+            className="text-blue-700 hover:underline text-sm md:text-base"
+          >
             Algemene Voorwaarden
           </Link>
         </div>
@@ -20,7 +26,7 @@ const Footer = () => {
           © {new Date().getFullYear()} <span className="font-semibold">Collab4You</span>. Alle rechten voorbehouden.
         </div>
 
-        {/* Disclaimer onderaan in kleine letters */}
+        {/* Disclaimer onderaan */}
         <div className="text-gray-600 text-xs mt-1 md:mt-2">
           De informatie op deze website is uitsluitend bedoeld voor algemene informatie. 
           Hoewel we streven naar correcte informatie, kan <span className="font-semibold">Collab4You</span> niet aansprakelijk worden gesteld voor fouten of onvolledigheden.
