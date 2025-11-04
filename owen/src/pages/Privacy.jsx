@@ -5,6 +5,7 @@ const Privacy = () => {
   return (
     <>
       <Title>Privacybeleid - Collab4You</Title>
+      <Meta rel="canonical" href="https://collab4you.nl/privacy" />
       <Meta
         name="description"
         content="Lees ons privacybeleid over hoe we jouw gegevens beschermen bij Collab4You. Deze website is puur informatief en statisch."

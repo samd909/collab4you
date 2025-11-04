@@ -5,6 +5,7 @@ const Services = () => {
   return (
     <>
       <Title>Diensten - Collab4You</Title>
+      <Meta rel="canonical" href="https://collab4you.nl/services" />
       <Meta
         name="description"
         content="Ontdek hoe Collab4You bedrijven helpt groeien via op maat gemaakte Meta Ads strategieën."

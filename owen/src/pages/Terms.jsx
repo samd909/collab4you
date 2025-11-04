@@ -5,6 +5,7 @@ const Terms = () => {
   return (
     <>
       <Title>Algemene Voorwaarden - Collab4You</Title>
+      <Meta rel="canonical" href="https://collab4you.nl/tos" />
       <Meta
         name="description"
         content="Lees de algemene voorwaarden van Collab4You voor onze diensten en verantwoordelijkheden."

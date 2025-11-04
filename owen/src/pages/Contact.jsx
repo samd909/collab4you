@@ -5,6 +5,7 @@ const Contact = () => {
   return (
     <>
       <Title>Contact - Collab4You</Title>
+      <Meta rel="canonical" href="https://collab4you.nl/contact" />
       <Meta name="description" content="Contact information for Collab4You" />
 
       <main className="bg-bg min-h-screen py-12 px-6 overflow-auto md:overflow-hidden">

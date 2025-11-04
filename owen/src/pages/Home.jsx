@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <>
       <Title>Home - Collab4You</Title>
+      <Meta rel="canonical" href="https://collab4you.nl" />
       <Meta
         name="description"
         content="Bij Collab4You helpen we bedrijven groeien via gerichte Meta Ads campagnes op Facebook en Instagram."
