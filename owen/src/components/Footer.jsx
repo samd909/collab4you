@@ -1,10 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg text-gray-900 mt-auto w-full md:fixed md:bottom-0 md:left-0 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm md:text-base">
-        © {new Date().getFullYear()} <span className="font-semibold">Collab4You</span>. Alle rechten voorbehouden.
+    <footer className="bg-bg text-gray-900 w-full border-t border-gray-200 md:fixed md:bottom-0 md:left-0">
+      <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm md:text-base space-y-2">
+        {/* Links naar Privacy en Algemene Voorwaarden */}
+        <div className="flex justify-center space-x-4 mb-1">
+          <Link to="/privacy" className="text-accent hover:underline text-sm md:text-base">
+            Privacybeleid
+          </Link>
+          <Link to="/tos" className="text-accent hover:underline text-sm md:text-base">
+            Algemene Voorwaarden
+          </Link>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-gray-500 text-sm md:text-base">
+          © {new Date().getFullYear()} <span className="font-semibold">Collab4You</span>. Alle rechten voorbehouden.
+        </div>
+
+        {/* Disclaimer onderaan in kleine letters */}
+        <div className="text-gray-600 text-xs mt-1 md:mt-2">
+          De informatie op deze website is uitsluitend bedoeld voor algemene informatie. 
+          Hoewel we streven naar correcte informatie, kan <span className="font-semibold">Collab4You</span> niet aansprakelijk worden gesteld voor fouten of onvolledigheden.
+        </div>
       </div>
     </footer>
   );
