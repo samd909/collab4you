@@ -4,6 +4,7 @@
   --color-accent: #2B9CD8;
   --color-text: #000000;
   --color-bg: #e5f8ff;
+  --footer-height: 6rem; /* adjust to match footer height */
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--color-text);
   background-color: var(--color-bg);
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* Color helpers (use alongside Tailwind classes) */
@@ -60,20 +62,48 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Disable scroll on desktop */
+/* =========================================================
+   DESKTOP: No scroll, fixed footer, no overlap on zoom
+   ========================================================= */
 @media (min-width: 768px) {
   html,
   body {
-    overflow: hidden;
+    overflow: hidden; /* disable scroll */
+  }
+
+  main,
+  #app-main {
+    padding-bottom: var(--footer-height); /* space so footer never overlaps */
+  }
+
+  .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--color-bg);
+    border-top: 1px solid #d1d5db; /* light gray border */
+    z-index: 50;
   }
 }
 
-/* Allow scroll on mobile */
+/* =========================================================
+   MOBILE: Normal scroll
+   ========================================================= */
 @media (max-width: 767px) {
   html,
   body {
     overflow: auto;
   }
-}
 
+  .site-footer {
+    position: static;
+    height: auto;
+  }
+
+  main,
+  #app-main {
+    padding-bottom: 0;
+  }
+}

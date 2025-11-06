@@ -62,7 +62,7 @@ function AnimatedRoutes() {
   );
 }
 
-// Reusable wrapper for animation
+// Animated page wrapper
 const PageWrapper = ({ children }) => (
   <motion.div
     initial={{ opacity: 0, x: 50 }}
@@ -79,9 +79,11 @@ function App() {
   return (
     <HeadProvider>
       <Router>
-        <div className="flex flex-col min-h-screen">
+        <div id="app-root" className="flex flex-col min-h-screen">
           <Topbar />
-          <AnimatedRoutes />
+          <main id="app-main" className="flex-grow">
+            <AnimatedRoutes />
+          </main>
           <Footer />
         </div>
       </Router>
