@@ -10,11 +10,11 @@
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--color-text);
   background-color: var(--color-bg);
   overflow-x: hidden; /* prevent horizontal scroll */
+  height: 100%;
 }
 
 /* Color helpers (use alongside Tailwind classes) */
@@ -63,47 +63,66 @@ body {
 }
 
 /* =========================================================
-   DESKTOP: No scroll, fixed footer, no overlap on zoom
+   APP LAYOUT
+   ========================================================= */
+#app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+main,
+#app-main {
+  flex: 1 0 auto; /* grow to fill space */
+  padding-bottom: var(--footer-height);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  flex-shrink: 0; /* do not shrink */
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--color-bg);
+  border-top: 1px solid #d1d5db; /* light gray border */
+}
+
+/* =========================================================
+   DESKTOP: scroll only when needed
    ========================================================= */
 @media (min-width: 768px) {
-  html,
   body {
-    overflow: hidden; /* disable scroll */
+    overflow-y: overlay; /* scroll appears only if needed */
   }
 
-  main,
-  #app-main {
-    padding-bottom: var(--footer-height); /* space so footer never overlaps */
+  /* Optional: minimal scrollbar styling */
+  body::-webkit-scrollbar {
+    width: 8px;
   }
-
-  .site-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: var(--footer-height);
-    background-color: var(--color-bg);
-    border-top: 1px solid #d1d5db; /* light gray border */
-    z-index: 50;
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
   }
 }
 
 /* =========================================================
-   MOBILE: Normal scroll
+   MOBILE: normal scroll
    ========================================================= */
 @media (max-width: 767px) {
-  html,
   body {
-    overflow: auto;
-  }
-
-  .site-footer {
-    position: static;
-    height: auto;
+    overflow-y: auto;
   }
 
   main,
   #app-main {
     padding-bottom: 0;
+  }
+
+  .site-footer {
+    height: auto;
   }
 }
